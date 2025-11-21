@@ -9,38 +9,38 @@ const Timeline = () => {
   const experiences = [
     {
       company: "Diamond Diagnostics",
-      role: "Full Stack Developer",
-      period: "Aug 2023 – Current",
-      location: "Remote",
-      description: "Migrated AngularJS to Angular for a unified ERP/CRM, used AWS Lambda/S3, Redis caching, and Elastic Beanstalk.",
-      technologies: ["Angular", "AWS Lambda", "S3", "Redis", "Elastic Beanstalk"],
+      role: "Software Engineer",
+      period: "Aug 2024 – Present",
+      location: "Holliston, MA",
+      description: "Engineered AI dispatch system with LLMs and Google Maps API reducing dispatch time by 30% and travel costs by 15%. Designed modular Angular ERP architecture cutting 40% redundant code. Deployed real-time WebSocket notification system with 99.9% delivery reliability. Optimized backend with Redis caching, AWS Lambda, and S3, cutting API latency by 25%.",
+      technologies: ["Angular", "LLMs", "Google Maps API", "WebSocket", "AWS Lambda", "S3", "Redis", "OpenAI"],
       current: true
     },
     {
       company: "Venu",
-      role: "AI Software Engineer",
-      period: "Aug 2023 – May 2024",
-      location: "Remote",
-      description: "Built cross-platform app with React Native and a smart chatbot using AWS Bedrock and Google Places API. Led backend optimization using Java + Spring Boot.",
-      technologies: ["React Native", "AWS Bedrock", "Google Places API", "Java", "Spring Boot"],
+      role: "AI Software Engineer Intern (Founding Team)",
+      period: "Jan 2024 – Jul 2024",
+      location: "Boston, MA",
+      description: "Founded and architected cross-platform mobile app achieving App/Play Store launch with 4.8+ rating. Delivered AI recommendation engine in 2 weeks using AWS Bedrock and Google Places API, enabling successful pre-seed funding. Drove 25% retention improvement implementing Spring Boot microservices for behavioral analytics.",
+      technologies: ["React Native", "Expo", "AWS Bedrock", "Google Places API", "Spring Boot", "Microservices"],
       current: false
     },
     {
       company: "READY.NET",
       role: "Software Engineer Intern",
       period: "May 2023 – Aug 2023",
-      location: "Remote",
-      description: "Refactored AntD components with TypeScript, boosting UI dev speed and testability.",
-      technologies: ["TypeScript", "Ant Design", "React"],
+      location: "Boston, MA",
+      description: "Refactored 20+ Ant Design components in TypeScript/React into independent modules, reducing future development effort by 40%. Integrated GitHub Actions CI/CD pipeline enforcing 100% Jest and Storybook test coverage, eliminating frontend regressions.",
+      technologies: ["TypeScript", "React", "Ant Design", "GitHub Actions", "Jest", "Storybook"],
       current: false
     },
     {
-      company: "PAYBACK India",
-      role: "Backend Intern",
+      company: "PAYBACK",
+      role: "Software Engineer Intern",
       period: "Jun 2021 – Aug 2021",
-      location: "Remote",
-      description: "Improved MySQL performance, built secure REST APIs in Spring Boot.",
-      technologies: ["MySQL", "Spring Boot", "REST APIs"],
+      location: "Mumbai, India",
+      description: "Developed production-grade RESTful APIs in Java (Spring Boot) with JWT authentication, data validation, and Swagger documentation, enabling secure backend services supporting India's largest multi-brand loyalty platform.",
+      technologies: ["Java", "Spring Boot", "JWT", "Swagger", "REST APIs"],
       current: false
     }
   ];

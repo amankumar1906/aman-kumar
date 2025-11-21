@@ -9,24 +9,24 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "ApplyRight",
-      subtitle: "AI Resume Optimizer",
-      period: "Mar – Jun 2025",
-      description: "Full-stack application using FastAPI + React + Redpanda Kafka + OpenAI/Gemini APIs. Features custom RAG pipeline with DOCX export and intelligent skill scoring to help job seekers optimize their resumes.",
-      technologies: ["FastAPI", "React", "Kafka", "OpenAI API", "Gemini", "RAG", "DOCX"],
+      title: "VoyAIger",
+      subtitle: "AI-Powered Travel Itinerary Generator",
+      period: "Jul 2025 – Oct 2025",
+      description: "Built an AI-powered travel planner using React, FastAPI, and PydanticAI, applying the ReAct pattern to interpret unstructured user input and orchestrate multi-API workflows with schema validation and structured error handling. Implemented authentication and RAG-based personalization, enabling personalized trip recommendations from user history with retry logic, API observability, and rate limiting using Redis.",
+      technologies: ["React", "FastAPI", "PydanticAI", "ReAct", "RAG", "Redis", "Authentication", "API Orchestration"],
       github: "#",
       demo: "#",
       featured: true
     },
     {
-      title: "Car-O-Pedia",
-      subtitle: "Airbnb for Cars",
-      period: "Jan – Mar 2024",
-      description: "Built a complete car rental platform with React + Spring Boot featuring an admin panel, Stripe payment integration, and MongoDB database. Implemented UX-driven refinements based on user feedback.",
-      technologies: ["React", "Spring Boot", "MongoDB", "Stripe", "Admin Panel"],
+      title: "ApplyRight",
+      subtitle: "AI-Driven Resume Optimizing Tool",
+      period: "Feb 2025 – May 2025",
+      description: "Designed an AI-powered resume optimization platform using Gemini and OpenAI APIs, combining prompt-engineered skill extraction, structured metadata parsing, and a RAG pipeline with Supabase vector search, achieving 85%+ match scores with target job descriptions. Delivered end-to-end full-stack system with FastAPI and React (TypeScript), creating a custom metadata extractor for skill scoring and tone preservation.",
+      technologies: ["FastAPI", "React", "TypeScript", "OpenAI", "Gemini", "RAG", "Supabase", "Vector Search"],
       github: "#",
       demo: "#",
-      featured: false
+      featured: true
     }
   ];
 

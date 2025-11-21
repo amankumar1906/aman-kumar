@@ -1,30 +1,41 @@
-import { Code, Lightbulb, Users, Zap } from 'lucide-react';
+import { Brain, Code2, Database, Cloud, GitBranch, Cpu } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const About = () => {
   const { ref, isVisible } = useScrollAnimation();
 
-  const features = [
+  const skillCategories = [
     {
-      icon: Lightbulb,
-      title: "Problem Solver",
-      description: "I love building useful things and tackling complex challenges"
+      icon: Brain,
+      title: "AI & LLMOps",
+      skills: ["RAG Pipelines", "Agents", "Prompt Engineering", "LangChain", "LangGraph", "Vector Search", "Cursor/Claude Code"]
     },
     {
-      icon: Zap,
-      title: "Fast Learner",
-      description: "Quick to pick up new technologies and adapt to changing requirements"
+      icon: Code2,
+      title: "Languages & Frameworks",
+      skills: ["JavaScript", "TypeScript", "Python", "Java", "React", "Angular", "Next.js", "Node.js", "Spring Boot", "Django", "FastAPI"]
     },
     {
-      icon: Code,
-      title: "Quality Focused",
-      description: "I care about writing clean, maintainable code that stands the test of time"
+      icon: Database,
+      title: "Databases & Search",
+      skills: ["PostgreSQL", "MySQL", "MongoDB", "Elasticsearch", "DynamoDB", "Supabase", "Pinecone", "TigerGraph"]
     },
     {
-      icon: Users,
-      title: "Team Player",
-      description: "Always open to feedback and collaboration to achieve the best results"
+      icon: Cloud,
+      title: "Cloud & Infrastructure",
+      skills: ["AWS (Lambda, S3, SageMaker, EKS, Bedrock)", "GCP", "Docker", "Kubernetes", "OpenShift", "Redis"]
+    },
+    {
+      icon: Cpu,
+      title: "AI Libraries",
+      skills: ["Hugging Face Transformers", "AutoGen", "PydanticAI", "LangChain", "Redux", "GraphQL"]
+    },
+    {
+      icon: GitBranch,
+      title: "Development Practices",
+      skills: ["Agile/Scrum", "CI/CD", "Git", "TDD (Jest, Pytest)", "Code Review", "SDLC"]
     }
   ];
 
@@ -33,40 +44,49 @@ const About = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className={`text-4xl md:text-5xl font-bold mb-6 scroll-reveal ${isVisible ? 'visible' : ''}`}>
-            About Me
+            Technical Skills
           </h2>
           <div className={`w-24 h-1 bg-gradient-to-r from-primary to-primary-glow mx-auto mb-8 scroll-reveal ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}></div>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Main description */}
           <Card className={`gradient-card shadow-card hover-lift mb-12 scroll-reveal ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }}>
             <CardContent className="p-8">
               <p className="text-lg md:text-xl leading-relaxed text-center">
-                I love building useful things — whether it's AI-powered tools, full-stack web apps, 
-                or internal platforms that help teams work better. I'm quick to pick up new tech, 
-                care about quality, and always open to feedback. I enjoy solving problems, 
-                simplifying chaos, and quietly making things better.
+                Full Stack AI and Software Engineer with expertise in building scalable AI-powered applications,
+                modern web platforms, and cloud-native solutions. Passionate about leveraging cutting-edge technologies
+                to solve complex problems and deliver exceptional user experiences.
               </p>
             </CardContent>
           </Card>
 
-          {/* Feature grid */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <Card 
-                key={index} 
+          {/* Skills grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {skillCategories.map((category, index) => (
+              <Card
+                key={index}
                 className={`gradient-card shadow-soft hover-lift scroll-reveal ${isVisible ? 'visible' : ''}`}
-                style={{ transitionDelay: `${0.6 + index * 0.2}s` }}
+                style={{ transitionDelay: `${0.6 + index * 0.1}s` }}
               >
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4 flex justify-center">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center shadow-glow">
-                      <feature.icon className="h-8 w-8 text-primary-foreground" />
+                <CardContent className="p-6">
+                  <div className="mb-4 flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center shadow-glow">
+                      <category.icon className="h-6 w-6 text-primary-foreground" />
                     </div>
+                    <h3 className="text-lg font-semibold">{category.title}</h3>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill, skillIndex) => (
+                      <Badge
+                        key={skillIndex}
+                        variant="outline"
+                        className="hover-lift text-xs"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             ))}
