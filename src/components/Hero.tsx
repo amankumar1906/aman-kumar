@@ -23,7 +23,7 @@ const Hero = () => {
             <div className="w-40 h-40 rounded-full bg-gradient-to-br from-primary to-primary-glow shadow-glow animate-glow"></div>
             <div className="absolute inset-2 rounded-full overflow-hidden bg-muted flex items-center justify-center">
               <img
-                src="/portfolio.jpg"
+                src={`${import.meta.env.BASE_URL}portfolio.jpg`}
                 alt="Aman Kumar"
                 className="w-full h-full object-cover"
               />
