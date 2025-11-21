@@ -1,4 +1,4 @@
-import { Github, Calendar } from 'lucide-react';
+import { Github, Calendar, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -14,8 +14,8 @@ const Projects = () => {
       period: "Jul 2025 – Oct 2025",
       description: "Built an AI-powered travel planner using React, FastAPI, and PydanticAI, applying the ReAct pattern to interpret unstructured user input and orchestrate multi-API workflows with schema validation and structured error handling. Implemented authentication and RAG-based personalization, enabling personalized trip recommendations from user history with retry logic, API observability, and rate limiting using Redis.",
       technologies: ["React", "FastAPI", "PydanticAI", "ReAct", "RAG", "Redis", "Authentication", "API Orchestration"],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/amankumar1906",
+      demo: "https://voyaiger.vercel.app/",
       featured: true
     },
     {
@@ -43,10 +43,10 @@ const Projects = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card 
+              <Card
                 key={index}
-                className={`gradient-card shadow-card hover-lift transition-smooth group ${
-                  project.featured ? 'ring-2 ring-primary/20' : ''
+                className={`gradient-card shadow-card hover-lift transition-smooth group border-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 ${
+                  project.featured ? 'ring-2 ring-primary/30 border-primary/30' : ''
                 } scroll-reveal ${isVisible ? 'visible' : ''}`}
                 style={{ transitionDelay: `${0.4 + index * 0.3}s` }}
               >
@@ -86,10 +86,10 @@ const Projects = () => {
                   </div>
 
                    <div className="flex gap-4 pt-4">
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="hover-glow" 
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="hover-glow"
                       asChild
                     >
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -97,6 +97,19 @@ const Projects = () => {
                         Code
                       </a>
                     </Button>
+                    {project.demo && project.demo !== "#" && (
+                      <Button
+                        variant="default"
+                        size="sm"
+                        className="hover-glow bg-gradient-to-r from-primary to-primary-glow"
+                        asChild
+                      >
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Live Demo
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>

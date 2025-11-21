@@ -68,12 +68,12 @@ const Timeline = () => {
                 }`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-primary rounded-full transform md:-translate-x-1/2 shadow-glow z-10"></div>
+                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-primary rounded-full transform md:-translate-x-1/2 shadow-glow z-10 ring-4 ring-primary/20 animate-pulse"></div>
 
                 {/* Content card */}
                 <div className={`ml-12 md:ml-0 w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                  <Card 
-                    className={`gradient-card shadow-card hover-lift scroll-reveal-${index % 2 === 0 ? 'right' : 'left'} ${isVisible ? 'visible' : ''}`}
+                  <Card
+                    className={`gradient-card shadow-card hover-lift scroll-reveal-${index % 2 === 0 ? 'right' : 'left'} ${isVisible ? 'visible' : ''} group border-2 hover:border-primary/50 transition-all hover:shadow-xl hover:shadow-primary/10`}
                     style={{ transitionDelay: `${0.4 + index * 0.2}s` }}
                   >
                     <CardHeader>

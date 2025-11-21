@@ -19,15 +19,17 @@ const Hero = () => {
         <div className="animate-fade-in-up">
           {/* Profile Photo */}
         <div className="mb-8 flex justify-center">
-          <div className="relative">
-            <div className="w-40 h-40 rounded-full bg-gradient-to-br from-primary to-primary-glow shadow-glow animate-glow"></div>
-            <div className="absolute inset-2 rounded-full overflow-hidden bg-muted flex items-center justify-center">
+          <div className="relative group">
+            <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary via-primary-glow to-accent shadow-glow animate-glow transition-transform group-hover:scale-105"></div>
+            <div className="absolute inset-2 rounded-full overflow-hidden bg-muted flex items-center justify-center ring-4 ring-background/50 transition-all group-hover:ring-primary/30">
               <img
                 src={`${import.meta.env.BASE_URL}portfolio.jpg`}
                 alt="Aman Kumar"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform group-hover:scale-110"
               />
             </div>
+            {/* Decorative elements */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full blur-2xl -z-10 animate-pulse"></div>
           </div>
         </div>
 
@@ -41,7 +43,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 animate-slide-in-right max-w-2xl mx-auto">
-            Full Stack AI and Software Engineer based in Boston
+            Full Stack AI and Software Engineer
           </p>
 
           {/* Social links */}
@@ -49,22 +51,22 @@ const Hero = () => {
             <Button
               variant="outline"
               size="lg"
-              className="hover-lift hover-glow"
+              className="hover-lift hover-glow group border-2 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20"
               asChild
             >
               <a href="https://github.com/amankumar1906" target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-5 w-5" />
+                <Github className="mr-2 h-5 w-5 transition-transform group-hover:rotate-12" />
                 GitHub
               </a>
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="hover-lift hover-glow"
+              className="hover-lift hover-glow group border-2 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20"
               asChild
             >
               <a href="https://linkedin.com/in/aman-kumar-a993bb1bb/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="mr-2 h-5 w-5" />
+                <Linkedin className="mr-2 h-5 w-5 transition-transform group-hover:rotate-12" />
                 LinkedIn
               </a>
             </Button>
@@ -76,7 +78,7 @@ const Hero = () => {
           variant="ghost"
           size="lg"
           onClick={scrollToAbout}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hover-glow"
+          className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce hover-glow"
         >
           <ChevronDown className="h-8 w-8" />
         </Button>
