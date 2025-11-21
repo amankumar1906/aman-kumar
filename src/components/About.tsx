@@ -66,22 +66,22 @@ const About = () => {
             {skillCategories.map((category, index) => (
               <Card
                 key={index}
-                className={`gradient-card shadow-soft hover-lift scroll-reveal ${isVisible ? 'visible' : ''}`}
+                className={`gradient-card shadow-soft hover-lift scroll-reveal ${isVisible ? 'visible' : ''} group border-2 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/10`}
                 style={{ transitionDelay: `${0.6 + index * 0.1}s` }}
               >
                 <CardContent className="p-6">
                   <div className="mb-4 flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center shadow-glow">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center shadow-glow transition-transform group-hover:scale-110 group-hover:rotate-6">
                       <category.icon className="h-6 w-6 text-primary-foreground" />
                     </div>
-                    <h3 className="text-lg font-semibold">{category.title}</h3>
+                    <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">{category.title}</h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, skillIndex) => (
                       <Badge
                         key={skillIndex}
                         variant="outline"
-                        className="hover-lift text-xs"
+                        className="hover-lift text-xs hover:bg-primary/10 hover:border-primary/50 transition-all cursor-default"
                       >
                         {skill}
                       </Badge>
